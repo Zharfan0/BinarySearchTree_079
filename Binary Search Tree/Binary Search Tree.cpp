@@ -37,5 +37,6 @@ public:
 
 		Node* parent = NULL;
 		Node* currnetNode = NULL;
+		search(element, parent, currentNode); //Locate the node which will be theparent of the node to be inserted
 	}
 };
