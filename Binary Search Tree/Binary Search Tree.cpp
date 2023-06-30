@@ -38,5 +38,11 @@ public:
 		Node* parent = NULL;
 		Node* currnetNode = NULL;
 		search(element, parent, currentNode); //Locate the node which will be theparent of the node to be inserted
+		
+		if (parent == NULL) //if the parent is NULL (tree is empty)
+		{
+			ROOT = newNode; //Mark the new node as ROOT
+			return; //exit
+		}
 	}
 };
