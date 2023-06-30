@@ -36,7 +36,7 @@ public:
 		newNode->rightchild = NULL; //Make the right child of the new node point to NULL
 
 		Node* parent = NULL;
-		Node* currnetNode = NULL;
+		Node* currentNode = NULL;
 		search(element, parent, currentNode); //Locate the node which will be theparent of the node to be inserted
 		
 		if (parent == NULL) //if the parent is NULL (tree is empty)
@@ -122,6 +122,50 @@ int main()
 	BinaryTree obj;
 	while (true)
 	{
+		cout << "\nMenu" << endl;
+		cout << "1. Implement insert operation" << endl;
+		cout << "2. Perform inorder traversal" << endl;
+		cout << "3. Perfrom preorder traversal" << endl;
+		cout << "4. Perform postorder traversal" << endl;
+		cout << "5. Exit" << endl;
+		cout << "\nEnter your chouce (1-5): ";
 
+		char ch;
+		cin >> ch;
+		cout << endl;
+
+		switch (ch)
+		{
+		case '1':
+		{
+			cout << "Enter a word: ";
+			string word;
+			cin >> word;
+			obj.insert(word);
+			break;
+		}
+		case '2':
+		{
+			obj.inorder(obj.ROOT);
+			break;
+		}
+		case '3':
+		{
+			obj.preorder(obj.ROOT);
+			break;
+		}
+		case '4':
+		{
+			obj.postorder(obj.ROOT);
+			break;
+		}
+		case '5':
+			return 0;
+		default:
+		{
+			cout << "Invalid option" << endl;
+		}
+		}
 	}
+
 }
